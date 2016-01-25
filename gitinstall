@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 yum remove -y git*
 sudo yum -y groupinstall "Development Tools"
-sudo yum -y install gettext-devel openssl-devel perl-CPAN perl-devel zlib-devel
+sudo yum -y install gettext-devel openssl-devel perl-CPAN perl-devel zlib-devel curl-devel
 
 #create git folder if not exists && download git source
 mkdir -p git && cd git
