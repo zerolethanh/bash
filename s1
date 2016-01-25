@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /Volumes/macsd/code/laravel/bankinvoice/public
+php -S localhost:8000
