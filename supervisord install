@@ -1,0 +1,29 @@
+１。サイト：
+http://supervisord.org/installing.html
+
+２。インストール
+ CentOS:
+ yum install supervisor
+
+３。設定：(参照リンク：http://laravel.com/docs/5.1/queues 下の方)
+CentOSの場合：
+confファイル場所：/etc/supervisord.conf
+追加設定フォルダー: /etc/supervisord.d/
+この中に　laravel-worker.ini　設定ファイルをおきます：(ファイル内容は/etc/supervisord.d/laravel-worker.ini　に参照してください）：
+
+[program:laravel-worker]
+process_name=%(program_name)s_%(process_num)02d
+command=php /home/lvt/ama_hp/artisan queue:work sqs --sleep=3 --tries=3 --daemon
+autostart=true
+autorestart=true
+user=root
+numprocs=8
+redirect_stderr=true
+stdout_logfile=/home/lvt/ama_hp/storage/app/laravel-worker.log
+
+４。設定ファイルを読み込み
+supervisord -c /etc/supervisord.conf
+supervisorctl -c /etc/supervisord.conf
+supervisorctl reread
+supervisorctl update
+supervisorctl start laravel-worker:*

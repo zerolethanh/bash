@@ -1,0 +1,5 @@
+参照リンク：https://github.com/Unitech/pm2
+
+1. インストール
+npm install pm2 -g
+

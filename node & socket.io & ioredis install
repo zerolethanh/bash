@@ -1,0 +1,23 @@
+全てCentOSの場合です：
+
+1.node インストール
+a) curl から
+curl --silent --location https://rpm.nodesource.com/setup | bash -
+yum -y install nodejs
+
+b) epel　repo　から
+sudo yum install nodejs npm --enablerepo=epel
+
+
+2.socket.io　インストール
+npm install socket.io
+
+3.ioredisインストール（参照：https://github.com/luin/ioredis）
+npm install ioredis
+
+4.laravelにioredisライブラリ追加：
+a) composer.jsonにrequireに追加：
+"require": {
+    "predis/predis": "~1.0"
+},
+b) composer update　でライブラリアプデートする

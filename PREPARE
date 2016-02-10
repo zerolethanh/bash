@@ -1,0 +1,23 @@
+//composer
+delete composer.lock
+composer install
+
+//redis
+$ wget http://download.redis.io/releases/redis-3.0.5.tar.gz
+$ tar xzf redis-3.0.5.tar.gz
+$ cd redis-3.0.5
+$ make
+
+//upload bootstrap folder
+
+///var/www/html/index.php file
+require '/home/lvt/laravel-bankinvoice/bankinvoice/bootstrap/autoload.php';
+$app = require_once '/home/lvt/laravel-bankinvoice/bankinvoice/bootstrap/app.php';
+$kernel = $app->make('Illuminate\Contracts\Http\Kernel');
+$response = $kernel->handle(
+    $request = Illuminate\Http\Request::capture()
+);
+$response->send();
+$kernel->terminate($request, $response);
+
+///

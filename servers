@@ -1,0 +1,83 @@
+1. https://secure.sakura.ad.jp/cloud/
+会員ID：zql69952
+Password: XsCc2$wxCw!dgxSvV#@#Eg325B31$tcc
+Password: XsCc2$wxCw!dgxSvV#@#Eg325B31$tcc
+
+6.amadellas.com : 153.120.169.23
+ssh -p 4444 root@153.120.169.23
+
+lvt a976d81d-e082-44ca-bf59-9e2e8363e412
+    a976d81d-e082-44ca-bf59-9e2e8363e412
+
+root 2CA32398-4461-43A3-9A45-631DAAA257B5
+     2CA32398-4461-43A3-9A45-631DAAA257B5
+
+4.main database server: 133.242.245.132(write)
+a.main database(maria db)
+ lvt ca166d20-262a-47b0-90ca-6099764ba0f6
+     ca166d20-262a-47b0-90ca-6099764ba0f6
+
+b.DB amadellas.com: 133.242.245.133(read)
+
+c.DB test.server: 133.242.245.142
+ssh login:
+    root 086D09A9B912
+         086D09A9B912
+
+    lvt E8CAB272-BB6E-4199-BA5D-76326452BEFD
+        E8CAB272-BB6E-4199-BA5D-76326452BEFD
+mysql login:
+    lvt 88FD9C1D-A049-46C1-9094-390E0B1E63FD
+        88FD9C1D-A049-46C1-9094-390E0B1E63FD
+
+
+server : 153.120.167.173
+DB login
+l   B435E95A-9406-4210-B3DA-015481AC392F
+    B435E95A-9406-4210-B3DA-015481AC392F
+ssh login
+  l 605F8248-F23A-4ABE-935A-726030000F20
+    605F8248-F23A-4ABE-935A-726030000F20
+
+  lvt e279c747-1786-4820-ab01-5065578259ea
+      e279c747-1786-4820-ab01-5065578259ea
+
+  root  efed3238-bf80-41fa-a457-f8582742bef9
+        efed3238-bf80-41fa-a457-f8582742bef9
+
+
+7.@amadellas.com : 153.120.169.30
+'mail' =>  array ( 
+    'driver' => 'smtp', 
+    'host' => '153.120.169.30', 
+    'port' => 587, 
+    'from' =>    array (     'address' => NULL,     'name' => NULL,   ), 
+    'encryption' => NULL, 
+    'username' => 'contact-bankinvoice', 
+    'password' => '7C1DA0D6-224B-454D-8870-DB46CAABB5F3', 
+    'sendmail' => '/usr/sbin/sendmail -bs', 
+    'pretend' => false, 
+ ),
+login:
+contact-bankinvoice 7C1DA0D6-224B-454D-8870-DB46CAABB5F3
+lvt NzRiOWE2ZmZmMDY0YzRjZWM5NWFiNzQx
+publicdep publicdep@
+
+8. bankinvoice.com
+start ssl :
+bankinvoice.com.key
+pass phrase : F6D155E5-4D70-4CA0-BC3E-223B6BEB8FA5
+
+
+
+</dev/urandom tr -dc '12345!@#$%qwertQWERTasdfgASDFGzxcvbZXCVB' | head -c32; echo ""
+date +%s | sha256sum | base64 | head -c 32 ; echo
+< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-32};echo;
+openssl rand -base64 32
+tr -cd '[:alnum:]' < /dev/urandom | fold -w32 | head -n1
+strings /dev/urandom | grep -o '[[:alnum:]]' | head -n 32 | tr -d '\n'; echo
+< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c32
+dd if=/dev/urandom bs=1 count=32 2>/dev/null | base64 -w 0 | rev | cut -b 2- | rev
+randpw(){ < /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-16};echo;}
+date | md5sum
+

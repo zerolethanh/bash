@@ -1,0 +1,5 @@
+insert into bill_user(user_id,bill_id,billtype,billbox,is_sender) select id,from_id,billtype,outs,1 from bills;
+insert into bill_user(user_id,bill_id,billtype,billbox,is_receiver) select id,from_id,billtype,ins,1 from bills;
+update bill_user set is_countable=1 where billbox in (
+        'inbox', 'back', 'inpaid', 'confirmed',
+        'draft', 'sent', 'returned', 'outpaid');
